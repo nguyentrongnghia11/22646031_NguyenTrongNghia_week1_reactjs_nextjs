@@ -1,5 +1,5 @@
 
-
+//3.1
 const Data_1 = {
     Dolphins: [96, 108, 89],
     Koalas: [88, 91, 110]
@@ -22,3 +22,7 @@ const calculatorAvg = (numbers) => {
 
 console.log ("AVG of Dolphins: " ,calculatorAvg(Data_1.Dolphins))
 console.log ("AVG of Koalas : " , calculatorAvg(Data_1.Koalas))
+
+// 3.2
+calculatorAvg(Data_1.Dolphins) > calculatorAvg(Data_1.Koalas) ? console.log ("Dolphins win") 
+: calculatorAvg(Data_1.Dolphins) < calculatorAvg(Data_1.Koalas) ? console.log ("Koalas win") : console.log ("Equals")
