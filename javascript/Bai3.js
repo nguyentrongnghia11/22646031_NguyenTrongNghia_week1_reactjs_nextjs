@@ -35,6 +35,16 @@ calculatorAvg(Data_1.Dolphins) > calculatorAvg(Data_1.Koalas) ? console.log("Dol
 // 3.3
 const checkWin = (team1, team2) => {
 
+    if (calculatorSum(team1) < 100 && calculatorSum(team2) < 100 ) {
+        console.log("Both loss")
+        return;
+    }
+
+    if (calculatorSum(team2) < 100) {
+        console.log("Team 2 loss")
+        return;
+    }
+
     if (calculatorSum(team1) < 100) {
         console.log("Team 1 loss")
         return;
@@ -49,6 +59,8 @@ const checkWin = (team1, team2) => {
         : calculatorAvg(Data_1.Dolphins) < calculatorAvg(Data_1.Koalas) ? console.log("Koalas win") : console.log("Equals")
 
 }
+
+console.log ("Bai 3 cau 3: ")
 checkWin (Data_bonus_1.Dolphins, Data_bonus_1.Koalas)
 
 
