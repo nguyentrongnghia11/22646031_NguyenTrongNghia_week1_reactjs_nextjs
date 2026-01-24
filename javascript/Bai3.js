@@ -20,9 +20,36 @@ const calculatorAvg = (numbers) => {
     return average
 }
 
-console.log ("AVG of Dolphins: " ,calculatorAvg(Data_1.Dolphins))
-console.log ("AVG of Koalas : " , calculatorAvg(Data_1.Koalas))
+const calculatorSum = (numbers) => {
+    return numbers.reduce((sum, num) => sum + num, 0);
+
+}
+
+console.log("AVG of Dolphins: ", calculatorAvg(Data_1.Dolphins))
+console.log("AVG of Koalas : ", calculatorAvg(Data_1.Koalas))
 
 // 3.2
-calculatorAvg(Data_1.Dolphins) > calculatorAvg(Data_1.Koalas) ? console.log ("Dolphins win") 
-: calculatorAvg(Data_1.Dolphins) < calculatorAvg(Data_1.Koalas) ? console.log ("Koalas win") : console.log ("Equals")
+calculatorAvg(Data_1.Dolphins) > calculatorAvg(Data_1.Koalas) ? console.log("Dolphins win")
+    : calculatorAvg(Data_1.Dolphins) < calculatorAvg(Data_1.Koalas) ? console.log("Koalas win") : console.log("Equals")
+
+// 3.3
+const checkWin = (team1, team2) => {
+
+    if (calculatorSum(team1) < 100) {
+        console.log("Team 1 loss")
+        return;
+    }
+
+    if (calculatorSum(team2) < 100) {
+        console.log("Team 2 loss")
+        return;
+    }
+
+    calculatorAvg(Data_1.Dolphins) > calculatorAvg(Data_1.Koalas) ? console.log("Dolphins win")
+        : calculatorAvg(Data_1.Dolphins) < calculatorAvg(Data_1.Koalas) ? console.log("Koalas win") : console.log("Equals")
+
+}
+checkWin (Data_bonus_1.Dolphins, Data_bonus_1.Koalas)
+
+
+
