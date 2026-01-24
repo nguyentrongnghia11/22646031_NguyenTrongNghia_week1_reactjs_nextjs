@@ -1,17 +1,16 @@
 //2.1
 const Mark = {
     weight: 78,
-    height: 169
+    height: 1.8
 }
 
 const John = {
     weight: 92,
-    height: 195
+    height: 1.95
 }
 
 const calculator = (data) => {
-    const mass = data.weight * data.height
-    const BMI = mass / (data.height * data.height)
+    const BMI = data.weight / (data.height * data.height)
     return BMI;
 }
 const bmiJohn =   calculator(John)
@@ -19,6 +18,6 @@ const bmiMark =   calculator(Mark)
 
 const markHigherBMI = bmiMark > bmiJohn
 
-markHigherBMI ? console.log ("Mark's BMI is higher than John's!") : console.log ("John's BMI is higher than Mark's!")
+markHigherBMI ? console.log (`Mark's (${bmiMark}) BMI is higher than John's (${bmiJohn})!`) : console.log (`John's (${bmiJohn}) BMI is higher than Mark's (${bmiMark})!`)
 
 
