@@ -1,0 +1,23 @@
+.alert {
+  padding: 12px 20px;
+  border-radius: 6px;
+  margin: 16px auto;
+  width: fit-content;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s;
+}
+
+.alert-success {
+  background: #43a047;
+}
+
+.alert-warning {
+  background: #ffa000;
+}
+
+.alert-error {
+  background: #e53935;
+}
