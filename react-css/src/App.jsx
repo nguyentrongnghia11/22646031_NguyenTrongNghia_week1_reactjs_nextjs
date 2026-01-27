@@ -6,6 +6,7 @@ import ProductCard from './components/ProductCard'
 import Button from './components/Button';
 import Alert from './components/Alert';
 import LoginForm from './components/LoginForm';
+import ProductList from './components/ProductList';
 
 function App() {
   const [alert, setAlert] = useState({ type: '', message: '' });
@@ -21,6 +22,7 @@ function App() {
 
   return (
     <>
+      <ProductList />
       <ProductCard />
       <div style={{ marginTop: 24, display: 'flex', gap: 12, justifyContent: 'center' }}>
         <Button type="success" onClick={() => handleShowAlert('success')}>Success</Button>
