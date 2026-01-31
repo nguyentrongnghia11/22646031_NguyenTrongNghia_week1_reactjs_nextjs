@@ -11,6 +11,7 @@ import Header from './components/Header'
 import CardInfor from './components/CardInfor'
 import Footer from './components/Footer'
 import CounterApp from './components/counterApp'
+import Form from './components/Form'
 function App() {
   const [alert, setAlert] = useState({ type: '', message: '' });
 
@@ -38,8 +39,9 @@ function App() {
       <Header/>
       <CardInfor name={"Nguyen Trong Nghia"} age={22} mssv={22646031}/>
       <Footer/> */}
-      <CounterApp/>
+      {/* <CounterApp/> */}
 
+      <Form />
     </>
   )
 }
