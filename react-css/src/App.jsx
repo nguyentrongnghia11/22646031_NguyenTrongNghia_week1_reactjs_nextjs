@@ -10,6 +10,7 @@ import ProductList from './components/ProductList';
 import Header from './components/Header'
 import CardInfor from './components/CardInfor'
 import Footer from './components/Footer'
+import CounterApp from './components/counterApp'
 function App() {
   const [alert, setAlert] = useState({ type: '', message: '' });
 
@@ -33,10 +34,12 @@ function App() {
       </div>
       <Alert type={alert.type} message={alert.message} />
       <LoginForm /> */}
-
+      {/* 
       <Header/>
       <CardInfor name={"Nguyen Trong Nghia"} age={22} mssv={22646031}/>
-      <Footer/>
+      <Footer/> */}
+      <CounterApp/>
+
     </>
   )
 }
