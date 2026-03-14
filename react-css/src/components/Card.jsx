@@ -1,0 +1,12 @@
+
+
+export default function Card({ name, email }) {
+
+    return (
+        <>
+            <h1>`Name: ${name} `</h1>
+            <h1>`Email: ${email} `</h1>
+        </>
+    )
+
+}

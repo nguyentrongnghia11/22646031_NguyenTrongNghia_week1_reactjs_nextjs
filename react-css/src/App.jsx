@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -12,36 +12,50 @@ import CardInfor from './components/CardInfor'
 import Footer from './components/Footer'
 import CounterApp from './components/counterApp'
 import Form from './components/Form'
+import Card from './components/Card'
 function App() {
-  const [alert, setAlert] = useState({ type: '', message: '' });
 
-  const handleShowAlert = (type) => {
-    let message = '';
-    if (type === 'success') message = 'Thành công!';
-    if (type === 'warning') message = 'Cảnh báo!';
-    if (type === 'error') message = 'Có lỗi xảy ra!';
-    setAlert({ type, message });
-    setTimeout(() => setAlert({ type: '', message: '' }), 2000);
-  };
+  const [data, setData] = useState([])
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
+
+
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/usersa')
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`);
+        }
+        return res.json();
+      })
+      .then((data) => {
+        console.log("day la data ", data);
+        setData(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.log("day la err ", error);
+        setError(error.message);
+        setLoading(false);
+      });
+  
+    setLoading(true);
+  }, []);
+
+
+
 
   return (
     <>
-      {/* <ProductList />
-      <ProductCard />
-      <div style={{ marginTop: 24, display: 'flex', gap: 12, justifyContent: 'center' }}>
-        <Button type="success" onClick={() => handleShowAlert('success')}>Success</Button>
-        <Button type="primary" onClick={() => handleShowAlert('warning')}>Warning</Button>
-        <Button type="danger" onClick={() => handleShowAlert('error')}>Error</Button>
-      </div>
-      <Alert type={alert.type} message={alert.message} />
-      <LoginForm /> */}
-      {/* 
-      <Header/>
-      <CardInfor name={"Nguyen Trong Nghia"} age={22} mssv={22646031}/>
-      <Footer/> */}
-      {/* <CounterApp/> */}
+      {
+        error !== '' ? (<h4> `${error}`</h4>) :
+          loading ? (
+            <h4>Loading</h4>
+          ) : data.map((item, key) => {
+            return <Card name={item.name} email={item.email} key={item.id} ></Card>
+          })
 
-      <Form />
+      }
     </>
   )
 }
