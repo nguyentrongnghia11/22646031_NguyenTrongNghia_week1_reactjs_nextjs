@@ -21,7 +21,7 @@ function App() {
 
 
   useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/usersa')
+    fetch('https://jsonplaceholder.typicode.com/users')
       .then((res) => {
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
