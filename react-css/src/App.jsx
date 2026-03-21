@@ -16,13 +16,16 @@ import Card from './components/Card'
 import Bai3 from './components/part4_bai3'
 import Bai4 from './components/part4_bai4'
 import Bai5 from './components/Bai5'
+import Bai6 from './components/part4_bai5'
 
 function App() {
   return (
     <div className="App">
       {/* <Bai3></Bai3> */}
       {/* <Bai4></Bai4> */}
-      <Bai5></Bai5>
+      {/* <Bai5></Bai5> */}
+      <Bai6></Bai6>
+
     </div>
   )
 

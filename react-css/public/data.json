@@ -1,0 +1,72 @@
+[
+    {
+      "id": 1,
+      "name": "Website Bán Hàng",
+      "description": "Trang web thương mại điện tử",
+      "category": "Web Development",
+      "status": "Completed"
+    },
+    {
+      "id": 2,
+      "name": "App Quản Lý Công Việc",
+      "description": "Ứng dụng theo dõi task",
+      "category": "Mobile App",
+      "status": "In Progress"
+    },
+    {
+      "id": 3,
+      "name": "Landing Page Sản Phẩm",
+      "description": "Trang giới thiệu sản phẩm",
+      "category": "Web Design",
+      "status": "Completed"
+    },
+    {
+      "id": 4,
+      "name": "Hệ Thống Chat Realtime",
+      "description": "Chat sử dụng WebSocket",
+      "category": "Backend",
+      "status": "In Progress"
+    },
+    {
+      "id": 5,
+      "name": "Dashboard Phân Tích",
+      "description": "Thống kê dữ liệu",
+      "category": "Data Visualization",
+      "status": "Planned"
+    },
+    {
+      "id": 6,
+      "name": "Game 2D HTML5",
+      "description": "Game đơn giản trên web",
+      "category": "Game Development",
+      "status": "Completed"
+    },
+    {
+      "id": 7,
+      "name": "API Quản Lý User",
+      "description": "RESTful API cho user",
+      "category": "Backend",
+      "status": "Completed"
+    },
+    {
+      "id": 8,
+      "name": "Blog Cá Nhân",
+      "description": "Website viết blog",
+      "category": "Web Development",
+      "status": "In Progress"
+    },
+    {
+      "id": 9,
+      "name": "App Thời Tiết",
+      "description": "Ứng dụng xem thời tiết",
+      "category": "Mobile App",
+      "status": "Planned"
+    },
+    {
+      "id": 10,
+      "name": "Hệ Thống Đặt Vé",
+      "description": "Booking vé online",
+      "category": "Fullstack",
+      "status": "In Progress"
+    }
+  ]
